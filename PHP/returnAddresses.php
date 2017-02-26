@@ -1,5 +1,5 @@
 <?php
-//This PHP file will return the address of the state capital from the selected State as a JSON.
+//This PHP file will return the address of the State capital from the selected State as a JSON.
 include_once 'connect.php';
 
 if( ! ini_get('date.timezone') )
@@ -7,16 +7,18 @@ if( ! ini_get('date.timezone') )
     date_default_timezone_set('EST');
 }
 
+/* Confirm that a variable has been sent. */
 if (isset($_GET["State"]))
 {
 	$state = $_GET["State"];
 }
+/* Doing a WHERE LIKE of a blank will return all values. */
 if ($state == "All") {
 	$state = "";
-} 
+}
 
-
-$locationID = array();
+/* Create arrays to be used for data storage. */
+$stateID = array();
 $address = array();
 
 $sql = "SELECT CapitolID FROM Capitols WHERE State LIKE ?";
@@ -24,21 +26,20 @@ $params = array("%".$state."%");
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 $stmt = sqlsrv_query( $conn, $sql , $params, $options );
 
-while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){ 
-	$locationID[] = $row;
+while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)){
+	$stateID[] = $row;
 }
-	
-foreach($locationID as $row){
+
+foreach($stateID as $row){
 	$sql = "SELECT c.City,s.Name AS State,CAST(c.Pop AS VARCHAR) AS Pop,CAST(c.Lat AS FLOAT) AS lat,CAST(c.Long AS FLOAT) AS lng FROM Capitols AS c INNER JOIN States AS s ON c.State = s.Abbr WHERE c.CapitolID = (?)";
-	//$sql = "SELECT CAST(Pop AS VARCHAR) AS Population,CAST(Lat AS FLOAT) AS lat,CAST(Long AS FLOAT) AS lng FROM Capitols WHERE CapitolID = (?)";
 	$params = array($row);
 	$stmt = sqlsrv_query( $conn, $sql, $params);
-	$name = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC); 
-	$address[] = $name;
+	$addr = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC);
+	$address[] = $addr;
 }
+
+/* Return values as JSON data to be process by an AJAX call. */
 header('Content-Type: application/json');
 echo json_encode($address);
-sqlsrv_free_stmt( $stmt);	
+sqlsrv_free_stmt( $stmt);
 ?>
-
-
