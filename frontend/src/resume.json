@@ -1,14 +1,15 @@
 {
 	"experience": {
 		"2015-Present - Traka USA LLC, Orlando, FL": {
-			"Advanced Support - Remote": [
-				"Responsible for the resolution of 2nd tier technical issues.",
+			"Tier 2 Support Technician - Remote": [
+				"Responsible for the resolution of tier 2 technical issues.",
 				"Liason between USA staff and UK based development teams.",
 				"Assist with planning and implementation of Enterprise level deployments.",
 				"Conduct internal trainings to maintain continuous knowledge sharing across departments.",
 				"Maintain local servers and provide first tier local IT assistance.",
 				"Developing and maintaining internal web based analytics tools (React/Firebase) and knowledge base (Wiki).",
-				"Designed and prototyped a solution that was produced >21,000 times for 410 customer sites."
+				"Designed and prototyped a solution that was produced >21,000 times for 410 customer sites.",
+				"Create web based tools for improving process and work flows."
 			],
 			"Systems Technician": [
 				"Installed and deployed Traka key cabinet and locker systems through the United States.",
