@@ -53,7 +53,7 @@ class Chart extends Component {
 						/>
 						<Line
 							name="Wind (mph)"
-							dataKey="wwind"
+							dataKey="wind"
 							stroke="orange"
 							dot={false}
 						/>
