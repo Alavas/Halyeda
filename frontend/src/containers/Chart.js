@@ -36,19 +36,13 @@ class Chart extends Component {
 						<Line
 							name="Outside Temp (°F)"
 							dataKey="outside"
-							stroke="black"
+							stroke="blue"
 							dot={false}
 						/>
 						<Line
 							name="Room Temp (°F)"
 							dataKey="room"
 							stroke="red"
-							dot={false}
-						/>
-						<Line
-							name="Feels Like (°F)"
-							dataKey="feelslike"
-							stroke="blue"
 							dot={false}
 						/>
 						<Line
@@ -67,12 +61,6 @@ class Chart extends Component {
 							name="Pressure (inHg)"
 							dataKey="pressure"
 							stroke="green"
-							dot={false}
-						/>
-						<Line
-							name="Rain (in)"
-							dataKey="rain"
-							stroke="purple"
 							dot={false}
 						/>
 						<Line
@@ -101,20 +89,14 @@ class Chart extends Component {
 								<td>{current.outside}</td>
 							</tr>
 							<tr>
-								<td>Feels Like</td>
-								<td>{current.feelslike}</td>
+								<td>Wind</td>
+								<td>{current.wind}</td>
 								<td>Humidity</td>
 								<td>{current.humidity}</td>
 							</tr>
 							<tr>
-								<td>Wind</td>
-								<td>{current.wind}</td>
 								<td>Pressure</td>
 								<td>{current.pressure}</td>
-							</tr>
-							<tr>
-								<td>Rain</td>
-								<td>{current.rain}</td>
 								<td>Light Lvl</td>
 								<td>{current.light}</td>
 							</tr>
