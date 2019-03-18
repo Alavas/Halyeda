@@ -1,0 +1,63 @@
+{
+	"experience": {
+		"2015-Present - Traka USA LLC, Orlando, FL": {
+			"Advanced Support - Remote": [
+				"Responsible for the resolution of 2nd tier technical issues.",
+				"Liason between USA staff and UK based development teams.",
+				"Assist with planning and implementation of Enterprise level deployments.",
+				"Conduct internal trainings to maintain continuous knowledge sharing across departments.",
+				"Maintain local servers and provide first tier local IT assistance.",
+				"Developing and maintaining internal web based analytics tools (React/Firebase) and knowledge base (Wiki).",
+				"Designed and prototyped a solution that was produced >21,000 times for 410 customer sites."
+			],
+			"Systems Technician": [
+				"Installed and deployed Traka key cabinet and locker systems through the United States.",
+				"Provided technical support and training for new and existing customers.",
+				"Assist with integrating into various access control systems."
+			]
+		},
+		"2007-2015 - The Blumenauer Corporation, Ocoee, FL": {
+			"Inside Sales/Service Technician/Technical Support": [
+				"Pump sizing and sales for Hot Water Recirculation, Boiler Feed, Fire Jockey, R.O., etc.",
+				"Technical support, after sales support, purchasing",
+				"Pump Repair & Failure Analysis",
+				"Developed web tools for energy efficiency auditing of advanced pumping systems.",
+				"Variable Frequency Drive sales, setup and service",
+				"Maintaining customer relations/Customer Service"
+			]
+		},
+		"2001-2007 - Grundfos Pumps Manufacturing Corporation, Fresno, CA": {
+			"Production Team Lead/Small & Medium CR Department": [
+				"Responsible for the safety of myself as well as 7-8 employees.",
+				"Maintaining and controlling quality product output.",
+				"Maintaining departmental 5S principles."
+			],
+			"Advanced Manufacturing Technician/BoosterpaQ": [
+				"Assembly of packaged pump booster systems according to W/I, BOM.",
+				"Functionality and performance testing of completed systems using 1 phase 230 and 3 phase 208/230/480 power supplies."
+			],
+			"Team Lead/Press Area 3rd Shift": [
+				"Responsible for safety, quality, and production of the department.",
+				"Evaluating the necessary labor and adjusting accordingly."
+			]
+		}
+	},
+	"skills": [
+		"JavaScript",
+		"ReactJS",
+		"C#",
+		"RESTful API",
+		"Redux",
+		"NodeJS",
+		"KiCad",
+		"CSS/SASS",
+		"HTML",
+		"Fusion 360",
+		"MS SQL Server",
+		"PostgreSQL",
+		"AWS (EC2, S3, Lambda)",
+		"Heroku",
+		"PowerShell",
+		"Firebase"
+	]
+}

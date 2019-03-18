@@ -1,5 +1,6 @@
 const express = require('express')
 const http = require('http')
+const path = require('path')
 const ws = require('ws')
 const bodyParser = require('body-parser')
 const _ = require('lodash')
@@ -21,8 +22,6 @@ app.use(
 		extended: true
 	})
 )
-
-app.use(express.static('public'))
 
 app.all('*', (req, res, next) => {
 	res.header('Access-Control-Allow-Origin', '*')
@@ -121,9 +120,10 @@ app.post('/api/data', async (req, res) => {
 	}
 })
 
-app.get('/*', (req, res) => {
-	res.sendFile(__dirname + '/public/index.html')
-	res.end
+app.use(express.static(path.join(__dirname, 'frontend/build')))
+
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'))
 })
 
 wss.on('connection', function open(ws) {
