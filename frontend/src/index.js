@@ -22,7 +22,7 @@ class createWS {
 		this.ws.onmessage = message => {
 			let payload = JSON.parse(message.data)
 			store.dispatch({
-				type: payload.action,
+				type: payload.type,
 				data: payload.data
 			})
 			this.missedMsgs = 0

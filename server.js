@@ -96,7 +96,7 @@ app.post('/api/data', async (req, res) => {
 			if (client.readyState === ws.OPEN) {
 				client.send(
 					JSON.stringify({
-						action: 'LOAD_DATA_SUCCESS',
+						type: 'LOAD_DATA_SUCCESS',
 						data: [data]
 					})
 				)
